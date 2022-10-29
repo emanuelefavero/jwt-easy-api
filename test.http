@@ -1,0 +1,12 @@
+### GET welcome route
+GET http://localhost:4000/api
+
+### Login
+POST http://localhost:4000/api/login
+
+### Make POST request with token (should give 200 success)
+POST http://localhost:4000/api/posts HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImpvaG4iLCJlbWFpbCI6ImpvaG5AZW1haWwuY29tIn0sImlhdCI6MTY2NzAxNDkxNX0.Yi-FACZirMsMNYaFxg_lfI3YsWDvEqQ77kIm04quE_8
+
+### Make POST request without token (should give 403 error)
+POST http://localhost:4000/api/posts
